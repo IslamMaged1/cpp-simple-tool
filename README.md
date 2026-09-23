@@ -1,6 +1,6 @@
-# C++ Security Tools
+# C++ Project
 
-Small C++ tools I'm building while learning networking and security.
+This is a practice project, and the goal is to build toward real tools.
 
 ## Decimal to Binary Converter
 
