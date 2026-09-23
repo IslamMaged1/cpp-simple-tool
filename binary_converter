@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+    int num = 0;
+    cout << "Enter a number: ";
+    cin >> num;
+
+    string binary="";
+
+    while (num>0) {
+        binary = to_string (num % 2) + binary;
+        num = num / 2;
+    }
+    cout << "Binary: " << binary << "\n";
+    return 0;
+}
