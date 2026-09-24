@@ -2,16 +2,30 @@
 #include <string>
 using namespace std;
 int main() {
-    int num = 0;
+    int number = 0;
     cout << "Enter a number: ";
-    cin >> num;
+    cin >> number;
 
-    string binary="";
-
-    while (num>0) {
-        binary = to_string (num % 2) + binary;
-        num = num / 2;
+    if (number < -128) {
+        cout << "Cannot handle more than 8 bits" "\n";
+        return 0;
     }
+
+    string binary = "";
+
+    if (number < 0) {
+        number = (256 + number);
+    }
+
+     while (number > 0) {
+        binary = to_string (number % 2) + binary;
+        number = (number / 2);
+
+    }
+     if (binary == "") {
+         binary ="0";
+     }
+
     cout << "Binary: " << binary << "\n";
-    return 0;
+     return 0;
 }
